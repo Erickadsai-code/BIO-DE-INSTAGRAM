@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Erick Barraza · aads.ai</title>
+<meta name="description" content="Especialista en anuncios e IA. Contacta con mi agencia, agenda una llamada 1 a 1 o entra a mi comunidad." />
+
+<!-- ============ SEO / REDES (Open Graph) ============ -->
+<meta property="og:title" content="Erick Barraza · aads.ai" />
+<meta property="og:description" content="Especialista en anuncios e IA. Contacta con mi agencia, agenda una llamada 1 a 1 o entra a mi comunidad." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bio.aads.ai" />
+<!-- <meta property="og:image" content="https://bio.aads.ai/preview.jpg" /> -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg-1: #0a0a0f;
+    --bg-2: #12121a;
+    --card: rgba(255, 255, 255, 0.04);
+    --card-hover: rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, 0.10);
+    --border-hover: rgba(255, 255, 255, 0.22);
+    --text: #f5f5f7;
+    --text-dim: #9a9aa6;
+    --accent: #7c5cff;
+    --accent-2: #00d4ff;
+    --radius: 18px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body { height: 100%; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text);
+    background:
+      radial-gradient(1200px 600px at 50% -10%, rgba(124, 92, 255, 0.18), transparent 60%),
+      radial-gradient(900px 500px at 100% 10%, rgba(0, 212, 255, 0.10), transparent 55%),
+      linear-gradient(180deg, var(--bg-1), var(--bg-2));
+    background-attachment: fixed;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 56px 20px 48px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* -------- Avatar -------- */
+  .avatar {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    box-shadow: 0 8px 40px rgba(124, 92, 255, 0.35);
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+  }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* -------- Header -------- */
+  .name {
+    margin-top: 18px;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .verified { width: 19px; height: 19px; color: var(--accent-2); }
+
+  .handle { margin-top: 4px; font-size: 14px; color: var(--text-dim); font-weight: 500; }
+
+  .tagline {
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: #d6d6df;
+    text-align: center;
+    max-width: 360px;
+  }
+
+  /* -------- Buttons -------- */
+  .links {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    padding: 18px 20px;
+    border-radius: var(--radius);
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  }
+  .link:hover {
+    transform: translateY(-2px);
+    background: var(--card-hover);
+    border-color: var(--border-hover);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  }
+  .link:active { transform: translateY(0); }
+
+  .link .ic {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.06);
+  }
+  .link .ic svg { width: 22px; height: 22px; }
+  .link .txt { display: flex; flex-direction: column; line-height: 1.25; }
+  .link .txt small { font-size: 12px; font-weight: 500; color: var(--text-dim); margin-top: 2px; }
+  .link .arrow { margin-left: auto; color: var(--text-dim); transition: transform 0.18s ease; }
+  .link:hover .arrow { transform: translateX(3px); color: var(--text); }
+
+  /* Accent variants */
+  .link.primary {
+    background: linear-gradient(135deg, rgba(124, 92, 255, 0.22), rgba(0, 212, 255, 0.14));
+    border-color: rgba(124, 92, 255, 0.45);
+  }
+  .link.primary .ic { background: rgba(255, 255, 255, 0.12); }
+
+  /* -------- Socials -------- */
+  .socials {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+  .socials a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--accent-2);
+    border: 1px solid rgba(0, 212, 255, 0.28);
+    transition: color 0.18s ease, border-color 0.18s ease, transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+  }
+  .socials a:hover {
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(124, 92, 255, 0.4);
+  }
+  .socials svg { width: 20px; height: 20px; }
+
+  /* -------- Newsletter -------- */
+  .newsletter { width: 100%; margin-top: 42px; }
+  .nl-label {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    margin-bottom: 14px;
+  }
+  .nl-card {
+    border: 2px solid rgba(0, 212, 255, 0.55);
+    border-radius: 22px;
+    padding: 12px;
+    background: var(--card);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 14px 40px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  .nl-card img { width: 100%; border-radius: 14px; display: block; }
+  .nl-caption {
+    text-align: center;
+    padding: 16px 10px 6px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--text);
+  }
+
+  .footer {
+    margin-top: 34px;
+    font-size: 12px;
+    color: var(--text-dim);
+    letter-spacing: 0.3px;
+  }
+  .footer a { color: var(--text-dim); text-decoration: none; }
+  .footer a:hover { color: var(--text); }
+</style>
+</head>
+<body>
+  <main class="container">
+
+    <!-- ============ FOTO DE PERFIL ============ -->
+    <div class="avatar">
+      <img src="img/perfil.png" alt="Erick Barraza" />
+    </div>
+
+    <h1 class="name">
+      Erick Barraza
+      <svg class="verified" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 2l2.4 1.8 3 .1 1 2.8 2.4 1.8-.9 2.9.9 2.9-2.4 1.8-1 2.8-3 .1L12 22l-2.4-1.8-3-.1-1-2.8L3.2 15.5l.9-2.9-.9-2.9 2.4-1.8 1-2.8 3-.1L12 2z"/>
+        <path d="M10.6 14.6l-2-2 1.1-1.1.9.9 3-3 1.1 1.1-4.1 4.1z" fill="#0a0a0f"/>
+      </svg>
+    </h1>
+
+    <p class="tagline">
+      Especialista en anuncios e IA
+    </p>
+
+    <!-- ============ BOTONES ============
+         Reemplaza el href="#..." de cada botón por tu enlace real.
+         Ejemplos:
+           Agencia (WhatsApp):  https://wa.me/521XXXXXXXXXX
+           Llamada 1 a 1:       https://calendly.com/tu-usuario/30min
+           Comunidad:           https://t.me/tucomunidad  o  https://chat.whatsapp.com/XXXX  -->
+    <nav class="links">
+
+      <!-- 1) Contacta con mi agencia -->
+      <a class="link primary" href="https://erick.aadsai.com/" target="_blank" rel="noopener">
+        <span class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/><path d="M3 13h18"/>
+          </svg>
+        </span>
+        <span class="txt">Contacta con mi agencia<small>Escalemos tu negocio juntos</small></span>
+        <span class="arrow">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
+      <!-- 2) Llamada 1 a 1 conmigo -->
+      <a class="link" href="https://erick.aadsai.com/#contacto" target="_blank" rel="noopener">
+        <span class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </span>
+        <span class="txt">Llamada 1 a 1 conmigo<small>Agenda tu sesión personalizada</small></span>
+        <span class="arrow">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
+      <!-- 3) Ingresa a mi comunidad -->
+      <a class="link" href="https://erick.aadsai.com/blog/" target="_blank" rel="noopener">
+        <span class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </span>
+        <span class="txt">Ingresa a mi comunidad<small>Aprende y conecta con otros</small></span>
+        <span class="arrow">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
+    </nav>
+
+    <!-- ============ SECCIÓN NEWSLETTER ============ -->
+    <section class="newsletter">
+      <p class="nl-label">Newsletter</p>
+      <div class="nl-card">
+        <img src="img/newsletter.png" alt="Newsletter de Erick Barraza" />
+        <p class="nl-caption">Correos semanales con todo sobre Meta Ads e IA</p>
+      </div>
+    </section>
+
+    <!-- ============ REDES SOCIALES ============
+         Cambia el href="#" por tus perfiles. LinkedIn ya está puesto. -->
+    <div class="socials">
+      <a href="https://www.youtube.com/@Erick_ads" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.5 6.4a3 3 0 0 0-2.1-2.1C18.6 3.8 12 3.8 12 3.8s-6.6 0-8.4.5A3 3 0 0 0 1.5 6.4 31 31 0 0 0 1 12a31 31 0 0 0 .5 5.6 3 3 0 0 0 2.1 2.1c1.8.5 8.4.5 8.4.5s6.6 0 8.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23 12a31 31 0 0 0-.5-5.6z"/><path d="M10 15l5-3-5-3z" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://www.instagram.com/erickads.ai/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@erickbarraza5" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 2c.3 2.3 1.7 4 4 4.3V9c-1.5 0-2.9-.4-4-1.2v6.6a5.4 5.4 0 1 1-5.4-5.4c.3 0 .6 0 .9.1v2.8a2.6 2.6 0 1 0 1.8 2.5V2H16z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/erickads/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3 0-2.95-1.8-2.95s-2.08 1.4-2.08 2.85V21H9z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61559818452167" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+      </a>
+      <a href="https://wa.me/573043450837" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.68-6.13A11.82 11.82 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.82 11.82 0 0 1 8.41 3.49 11.82 11.82 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.69-1.45L.06 24zM6.6 20.13c1.68.99 3.28 1.59 5.46 1.59 5.45 0 9.89-4.43 9.89-9.88a9.8 9.8 0 0 0-2.9-7A9.78 9.78 0 0 0 12.06 2c-5.46 0-9.9 4.43-9.9 9.88 0 2.1.55 3.65 1.65 5.34l-.99 3.62 3.78-.71zm11.36-5.5c-.07-.12-.27-.2-.57-.35-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.42z"/></svg>
+      </a>
+      <a href="mailto:admin@aadsai.com" rel="noopener" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+      </a>
+    </div>
+
+    <p class="footer">© <span id="y"></span> aads.ai — <a href="https://aads.ai" target="_blank" rel="noopener">aads.ai</a></p>
+  </main>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
